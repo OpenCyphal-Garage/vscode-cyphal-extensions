@@ -1,0 +1,89 @@
+/* Copyright 2022 Amazon.com Inc., or its affiliates. All Rights Reserved. */
+
+table, th, td {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  border-spacing: 10px;
+}
+
+table.light, th.light, td.light{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  border-spacing: 10px;
+}
+
+table{
+  top: 10%; 
+  position: absolute;
+}
+
+/* Toggle button heavily inspired by https://codepen.io/PaulinaSurazynska/pen/bGVpBOb*/
+.checkbox {
+display: none;
+transition: background 0.2s linear;
+}
+
+
+body {
+color: white; 
+background-color: black;
+transition: background 0.2s linear;
+}
+
+body.light {
+background-color: white;
+color: black;
+} 
+
+.label {
+top: 2vh; 
+left: 75vw;
+border: 1px solid #858b94;
+box-sizing: border-box;
+width: 50px;
+height: 26px;
+display: flex;
+border-radius:50px;
+align-items: center;
+justify-content: space-between;
+padding: 5px;
+position: relative;
+transform: scale(1.5);
+}
+
+.ball {
+box-sizing: border-box;
+width: 20px;
+height: 20px;
+background-color: #e0ecff;
+position: absolute;
+top: 2px;
+left: 2px;
+border-radius: 50%;
+transition: transform 0.2s linear;
+}
+
+/*  target the elemenent after the label*/
+.checkbox:checked + .label .ball{
+transform: translateX(24px);
+}
+
+.sun {
+position: absolute;
+width: 10px;
+height: 10px;
+border-radius: 50%; 
+background: #FFF61B;
+}
+.moon{
+  position: absolute;
+  left: 25px;
+  top: 5px;
+          width: 10px;
+          height: 10px;
+          background-color: transparent;
+          border-radius: 50%;
+          box-shadow: 2.5px 1px 0px 0px #fff; 
+}

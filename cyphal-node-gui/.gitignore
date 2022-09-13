@@ -1,0 +1,9 @@
+out
+dist
+node_modules
+.vscode-test/
+*.vsix
+*.db
+.yakut_compiled/
+.uavcan/
+.sirius_cyber_corp/

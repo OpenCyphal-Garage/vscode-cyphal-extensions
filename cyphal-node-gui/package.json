@@ -1,23 +1,24 @@
 {
   "name": "cyphal-node-gui",
-	"displayName": "cyphal-node-gui",
-	"description": "",
+	"displayName": "Cyphal Node GUI",
+	"description": "A GUI that displays the properties of Cyphal nodes",
 	"version": "0.0.1",
+	"publisher": "Edward S Kang (amazon)",
 	"engines": {
-		"vscode": "^1.71.0"
+		"vscode": "^1.67.2"
 	},
 	"categories": [
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:cyphal-node-gui.helloWorld"
+        "onCommand:cyphalNodeGUI.start"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "cyphal-node-gui.helloWorld",
-				"title": "Hello World"
+				"command": "cyphalNodeGUI.start",
+				"title": "Cyphal Online Nodes"
 			}
 		]
 	},
@@ -30,7 +31,7 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.71.0",
+		"@types/vscode": "^1.67.2",
 		"@types/glob": "^7.2.0",
 		"@types/mocha": "^9.1.1",
 		"@types/node": "16.x",
@@ -41,5 +42,6 @@
 		"mocha": "^10.0.0",
 		"typescript": "^4.7.2",
 		"@vscode/test-electron": "^2.1.3"
-	}
+	}, 
+	"extensionKind": ["workspace"]
 }

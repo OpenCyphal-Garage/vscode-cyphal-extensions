@@ -1,70 +1,52 @@
 # cyphal-node-gui README
 
-This is the README for your extension "cyphal-node-gui". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- This extension is built to display PyCyphal node heartbeat data in a compact GUI. 
+- It creates a table that displays all the online nodes that are currently being subscribed to in the user's shell.
+- It also displays corresponding information for each node in every row, specifically the following fields: 
+                    source_node_id
+                    transfer_id
+                    priority 
+                    uptime
+                    health 
+                    mode 
+                    vendor_specific_status_code 
+                    ts_system 
+                    ts_monotonic 
+- As new nodes come online, new rows will be automatically created with their heartbeat information in real-time.
+- The extension also includes a dark mode/light mode toggle button which changes the color scheme of the entire extension 
+  accordingly. 
+- The extension can handle both Cyphal UDP networks and Cyphal CAN networks
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- PyCyphal and Yakut must be installed and activated in your working directory
 
-## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Usage 
 
-For example:
+- Make sure your PyCyphal UDP or CAN network is running in the background in another terminal.
+- Run the extension with `F5` and select `Cyphal Online Nodes`.
+- Enter your network interface and press submit in the extension's webview.
+- Now watch as the node data populates the table! 
+- To switch to light mode/dark mode, just press the toggle button. The sun indicates light mode and the moon indicates 
+- dark mode.
+- To connect to a different interface, close the tab that running the `Cyphal Online Nodes` command opened up and then 
+  run the `Cyphal Online Nodes` command again.
 
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
 
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+Initial release of Cyphal Online Nodes includes table display GUI of online nodes in real-time and dark mode/light mode 
+toggle.
 
 **Enjoy!**
